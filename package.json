@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/332065255/js.utils/issues"
   },
-  "homepage": "https://github.com/332065255/js.utils#readme"
+  "homepage": "https://github.com/332065255/js.utils#readme",
+  "dependencies": {
+    "jsdoc": "^3.5.1"
+  }
 }
