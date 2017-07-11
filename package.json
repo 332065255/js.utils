@@ -1,0 +1,26 @@
+{
+  "name": "js.utils",
+  "version": "0.1.0",
+  "description": "js工具类",
+  "main": "src/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://332065255@github.com/332065255/js.utils.git"
+  },
+  "keywords": [
+    "js",
+    "utils"
+  ],
+  "author": "gao11",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/332065255/js.utils/issues"
+  },
+  "homepage": "https://github.com/332065255/js.utils#readme"
+}
