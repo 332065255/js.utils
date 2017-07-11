@@ -37,3 +37,38 @@ module.exports.debounce=function (fn, delay){
         timer = setTimeout(() => fn.apply(this, args), delay);
     }
 }
+
+module.exports.EventDispatcher=class EventDispatcher{
+    constructor(){
+        this.dic={};
+    }
+    on(type,fun){
+        if(!this.dic.hasOwnProperty(type)){
+            this.dic[type]=[];
+        }
+        this.dic[type].push(fun);
+    }
+    remove(type,fun){
+        if(!this.dic.hasOwnProperty(type)){
+            return;
+        }
+        if(fun==undefined||fun==null){
+            this.dic[type]=[];
+        }else{
+            for(var i = 0;i< this.dic[type].length;i++){
+                if(this.dic[type][i]==fun){
+                   this.dic[type] = this.dic[type].splice(i,1);
+                }
+            }
+        }
+    }
+    emit(type,...args){
+        if(!this.dic.hasOwnProperty(type)){
+            return;
+        }else{
+            for(var i = 0;i< this.dic[type].length;i++){
+                this.dic[type][i].apply(args);
+            }
+        }
+    }
+}
